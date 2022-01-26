@@ -1,4 +1,4 @@
-while _G.Toggle do wait()
+
 
 --Settings--
 local ESP = {
