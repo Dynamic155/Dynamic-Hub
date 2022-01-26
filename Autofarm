@@ -52,5 +52,4 @@ pcall(function()
           if s.playing ~= s.maxPlayers then
               TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
               wait()
-              rconsoleprint("\n\ServerHopped\n")
          end end end end) end end)
