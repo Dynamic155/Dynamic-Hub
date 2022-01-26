@@ -1,0 +1,12 @@
+local cam = game.Workspace.Camera
+local run = game:GetService("RunService")
+run.Stepped:Connect(function()
+for i,v in pairs(cam:GetChildren()) do
+if v:FindFirstChild("Part") or v:FindFirstChild("Handle") then
+v.Part.Name = "knife"
+v.knife.MeshId = "rbxassetid://6382052801"
+v.knife.TextureID = "rbxassetid://6382052846"
+v.Handle.Transparency = 0
+end
+end
+end)
