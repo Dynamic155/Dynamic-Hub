@@ -1,3 +1,5 @@
+   while _G.Toggle do wait()
+   
    getgenv().AutoFarm = true 
    local serverhop_Speed = 45
 spawn(function()
