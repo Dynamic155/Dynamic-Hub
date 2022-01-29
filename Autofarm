@@ -42,3 +42,14 @@ local ohInstance2 = workspace[v.Name].Hitbox
 game:GetService("ReplicatedStorage").Events.FallDamage:FireServer(ohNumber1, ohInstance2)
 end end end) end end)
 
+spawn(function()
+while AutoFarm do task.wait(serverhop_Speed)
+pcall(function()
+    for i = 1,9 do 
+ local HttpService, TPService = game:GetService("HttpService"), game:GetService("TeleportService")
+        local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+        for _, s in pairs(ServersToTP.data) do
+          if s.playing ~= s.maxPlayers then
+              TPService:TeleportToPlaceInstance(game.PlaceId, s.id)
+              wait()
+         end end end end) end end)
